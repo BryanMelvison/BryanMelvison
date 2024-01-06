@@ -6,6 +6,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -20,6 +23,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
           {children}
+          <SpeedInsights />
           <Footer />
         </ThemeProvider>
       </body>
