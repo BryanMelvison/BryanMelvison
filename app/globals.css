@@ -1,27 +1,176 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+@layer base {
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --primary: 142.1 76.2% 36.3%;
+      --primary-foreground: 355.7 100% 97.3%;
+      --secondary: 240 10% 3.9%;
+      --secondary-foreground: 355.7 100% 97.3%;
+      --tertiary: 27 82% 98%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 237 13% 40%;
+      --accent: 237 9% 95.9%;
+      --accent-foreground: 240 5.9% 10%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 80.1 75.2% 40.3%;
+      --input: 142.1 76.2% 36.3%;
+      --ring: 9 99% 67%;
+      --radius: 1rem;
+    }
+  
+    .dark {
+      --background: 237 22% 20%;
+      --foreground: 0 0% 95%;
+      --card: 240 19% 16%;
+      --card-foreground: 300 0% 100%;
+      --popover: 0 0% 9%;
+      --popover-foreground: 0 0% 95%;
+      --primary: 142.1 70.6% 45.3%;
+      --primary-foreground: 300 0% 100%;
+      --secondary: 240 19% 16%;
+      --secondary-foreground: 300 0% 100%;
+      --tertiary: 237 22% 20%;
+      --muted: 0 0% 15%;
+      --muted-foreground: 237 13% 63%;
+      --accent: 240 19% 16%;
+      --accent-foreground: 300 0% 100%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 85.7% 97.3%;
+      --border: 237 22% 23%;
+      --input: 237 22% 20%;
+      --ring: 8 99% 67%;
+    }
+  }
+  
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Add a floating animation to the icons */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
 }
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Grow and shrink for the title */
+@keyframes pulse-grow-shrink {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+
+
+/* Apply the pulse-grow-shrink animation to the title */
+.animate-pulse-grow-shrink {
+  animation: pulse-grow-shrink 2s infinite;
+}
+
+
+.custom-scroll {
+  max-height: 64; /* height adjusted as needed */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #22c55e;
+    border-radius: 20px;
+    border: 3px solid #f0f0f0;
+}
+
+
+.h1 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.h2{
+  @apply text-4xl font-bold;
+}
+
+.h3{
+  @apply text-3xl font-bold;
+}
+
+.h4{
+  @apply text-[22px] font-semibold;
+}
+
+.subtitle{
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
+.section-title{
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 before:w-[24px] before:h-[24px] ;
+}
+
+.badge {
+  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 
+  rounded-[10px] flex items-center gap-x-4;
+} 
+
