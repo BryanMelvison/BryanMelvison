@@ -54,7 +54,7 @@
         return (
             <section className="mb-12 xl:mb-32">
                 <div className="container mx-auto">
-                    <div className="flex items-center section-title mb-12 xl:mb-24 text-center mx-auto">
+                    <div className="flex flex-col xl:flex-row items-center section-title mb-12 xl:mb-24 text-center mx-auto">
                         <BoxesIcon className="text-green-500 animate-spin-slow" size={25}/>
                         <h2 className="animate-fade-in-up">Highlighted Projects</h2> 
                     </div>

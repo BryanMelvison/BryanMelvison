@@ -26,7 +26,7 @@ const ExperiencePage = () => {
     return (
         <section className="xl:h-[820px] mb-20 xl:py-24 ">
             <div className="container mx-auto">
-                <div className="flex items-center  section-title mb-12 xl:mb-24 text-center mx-auto">
+                <div className="flex flex-col xl:flex-row  items-center  section-title mb-12 xl:mb-24 text-center mx-auto">
                     <Briefcase className="text-green-500"  size= {25}/>
                     <h2>My Experiences</h2>
                 </div>

@@ -23,7 +23,7 @@ const Interests = () => {
     return (
         <section className="mb-12 xl:mb-24">
         <div className="container mx-auto">
-            <div className="flex items-center section-title mb-12 xl:mb-24 text-center mx-auto">
+            <div className="flex flex-col xl:flex-row  items-center section-title mb-12 xl:mb-24 text-center mx-auto">
                 <ComputerIcon className="text-green-500" size={25} />
                 <h2 >My Interests</h2>
             </div>
