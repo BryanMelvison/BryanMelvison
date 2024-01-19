@@ -53,9 +53,28 @@ const Cta = () => {
         },
     })
 
-    const onSubmit = ((data) => {
-
-    }) 
+    async function onSubmit(data) {
+        try {
+          const response = await fetch('/api/submit-form', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
+          
+          if (response.ok) {
+            // Form submitted successfully
+            console.log("Form submitted successfully!");
+          } else {
+            // Handle server-side validation errors if any
+            const errorData = await response.json();
+            console.error("Server-side errors:", errorData.errors);
+          }
+        } catch (error) {
+          console.error("An error occurred while submitting the form:", error);
+        }
+      }
 
     return(
         <section className="py-24 bg-tertiary dark:bg-secondary/40">
