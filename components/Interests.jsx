@@ -1,4 +1,4 @@
-import {GanttChartSquare ,Blocks, BellElectric, ComputerIcon, Bell} from 'lucide-react'
+import {GanttChartSquare ,Blocks, BellElectric, ComputerIcon} from 'lucide-react'
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
 
 const interestsData = [
@@ -44,27 +44,6 @@ const Interests = () => {
             </div>
         </div>
     </section>
-        // <section className="mb-12 xl:mb-24">
-        //     <div className="container mx-auto">
-        //         <div className="flex items-center  section-title mb-12 xl:mb-24 text-center mx-auto">
-        //             <ComputerIcon fill={"green"} size= {25}/>
-        //             <h2>My Interests</h2>
-        //         </div>
-        //         <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-12 xl:gap-y-24">
-        //             {interestsData.map((item,index) => {
-        //                 return <Card className="w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative" key={index}>
-        //                     <CardHeader className="text-primary absolute -top-[60px] animate-pulse">
-        //                         <div className="w-[140px] h-[80px] bg-white dark:bg-background flex justify-center items-center">{item.icon}</div>
-        //                     </CardHeader>
-        //                     <CardContent className="text-center" >
-        //                         <CardTitle className="mb-4 animate-pulse animate-bounce ">{item.title}</CardTitle>
-        //                         <CardDescription className="text-lg transition-transform hover:scale-125">{item.description}</CardDescription>
-        //                     </CardContent>
-        //                 </Card>
-        //             })}
-        //         </div>
-        //     </div>
-        // </section>
     )
 }
 

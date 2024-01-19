@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import { Inter, IBM_Plex_Sans, Lato } from 'next/font/google'
 import './globals.css'
 
 // Components
@@ -9,7 +9,7 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Lato({ weight: '400', subsets: ['latin'] })
 
 export const metadata = {
   title: 'Bryan Melvison',
