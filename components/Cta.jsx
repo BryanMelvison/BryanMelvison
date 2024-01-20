@@ -72,9 +72,9 @@ const Cta = () => {
             console.error("Server-side errors:", errorData.errors);
           }
         } catch (error) {
-          console.error("An error occurred while submitting the form:", error);
+            console.error("An error occurred while submitting the form:", error);
         }
-      }
+    }
 
     return(
         <section className="py-24 bg-tertiary dark:bg-secondary/40">
