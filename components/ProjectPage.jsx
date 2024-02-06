@@ -8,6 +8,7 @@
 
     import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
     import { ActivitySquareIcon, Briefcase, BoxesIcon } from 'lucide-react'
+    import Reveal from './reveal';
 
     const Projects = [
         {
@@ -54,48 +55,53 @@
         return (
             <section className="mb-12 xl:mb-32">
                 <div className="container mx-auto">
-                    <div className="flex flex-col xl:flex-row items-center section-title mb-12 xl:mb-24 text-center mx-auto">
-                        <BoxesIcon className="text-green-500 animate-spin-slow" size={25}/>
-                        <h2 className="animate-fade-in-up">Highlighted Projects</h2> 
-                    </div>
-                    <Swiper slidesPerView={1} 
-                        breakpoints={{
-                            640: {slidesPerView: 2},
-                            1400: {slidesPerView: 3},
-                        }}
-                        spaceBetween={30}
-                        modules={[Pagination]}
-                        pagination={{
-                            clickable:true
-                        }}
-                        className="h-[500px] "
-                    >
-                        {Projects.map((project, index) => (
-                            <SwiperSlide key={index}>
-                                <Card className="bg-white dark:bg-gray-800 shadow-md rounded-lg hover:-translate-y-2 transition-transform duration-300">
-                                    <CardHeader className="p-2 mx-auto w-32 h-32 relative mb-4 overflow-hidden">
-                                        <div className="image-container relative w-full h-full">
-                                            <Image src={project.image_link} alt={`${project.name} screenshot`} layout="fill" objectFit="contain" />
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent className="p-4 text-gray-600 dark:text-gray-300">
-                                        <CardTitle className="text-lg font-medium mb-2 text-gray-800 dark:text-white">{project.name}</CardTitle>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{project.tech_stacks}</p>
-                                        <div className="mb-3 text-sm">
-                                            <ul className="list-disc list-inside">
-                                                {project.bullet_points.split('.').filter(bullet => bullet).map((bullet, bulletIndex) => (
-                                                    <li key={bulletIndex} className="text-gray-700 dark:text-gray-300">{bullet.trim()}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <Link href={project.github_link} className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-300">
-                                            View on GitHub
-                                        </Link>
-                                    </CardContent>
-                                </Card>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                    <Reveal>
+                        <div className="flex flex-col xl:flex-row items-center section-title mb-12 xl:mb-24 text-center mx-auto">
+                            <BoxesIcon className="text-green-500 animate-spin-slow" size={25}/>
+                            <h2 className="animate-fade-in-up">Highlighted Projects</h2> 
+                        </div>
+                    </Reveal>
+                    <Reveal>
+                        <Swiper slidesPerView={1} 
+                            breakpoints={{
+                                640: {slidesPerView: 2},
+                                1400: {slidesPerView: 3},
+                            }}
+                            spaceBetween={30}
+                            modules={[Pagination]}
+                            pagination={{
+                                clickable:true
+                            }}
+                            className="h-[500px] "
+                        >
+                            {Projects.map((project, index) => (
+                                <SwiperSlide key={index}>
+                                    <Card className="bg-white dark:bg-gray-800 shadow-md rounded-lg hover:-translate-y-2 transition-transform duration-300">
+                                        <CardHeader className="p-2 mx-auto w-32 h-32 relative mb-4 overflow-hidden">
+                                            <div className="image-container relative w-full h-full">
+                                                <Image src={project.image_link} alt={`${project.name} screenshot`} layout="fill" objectFit="contain" />
+                                            </div>
+                                        </CardHeader>
+                                        <CardContent className="p-4 text-gray-600 dark:text-gray-300">
+                                            <CardTitle className="text-lg font-medium mb-2 text-gray-800 dark:text-white">{project.name}</CardTitle>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{project.tech_stacks}</p>
+                                            <div className="mb-3 text-sm">
+                                                <ul className="list-disc list-inside">
+                                                    {project.bullet_points.split('.').filter(bullet => bullet).map((bullet, bulletIndex) => (
+                                                        <li key={bulletIndex} className="text-gray-700 dark:text-gray-300">{bullet.trim()}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            <Link href={project.github_link} className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-300">
+                                                View on GitHub
+                                            </Link>
+                                        </CardContent>
+                                    </Card>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </Reveal>
+
                 </div>
             </section>
         )

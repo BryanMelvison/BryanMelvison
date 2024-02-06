@@ -19,6 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 import {Textarea} from "@/components/ui/textarea";
+import Reveal from "./reveal";
 
 const formSchema = z.object({
     first_name: z.string().min(1, {
@@ -80,10 +81,13 @@ const Cta = () => {
         <section className="py-24 bg-tertiary dark:bg-secondary/40">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
-                    <h2 className="h2 max-w-xl text-center mb-8">
-                        I welcome the opportunity to discuss future collaborations. If you're interested, please feel free to contact me.
-                    </h2>
-                    <Form {...form}>
+                    <Reveal>
+                        <h2 className="h2 max-w-xl text-center mb-8">
+                            I welcome the opportunity to discuss future collaborations. If you're interested, please feel free to contact me.
+                        </h2>
+                    </Reveal>
+
+                    {/* <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-lg">
                             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
                                 <FormField
@@ -153,7 +157,7 @@ const Cta = () => {
                             />
                             <Button type="submit" className="flex mx-auto mt-16 justify-center">Submit</Button>
                         </form>
-                    </Form>
+                    </Form> */}
                 </div>  
             </div>
         </section>
