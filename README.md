@@ -1,5 +1,5 @@
 ### Hi there 👋
-I'm a junior studying CS at HKU. Follow along my journey in learning new technologies!
+I'm Currently a Penultimate Student Studying Computer Science at the University of Hong Kong! Following along my journey in learning new things and concepts!
 
 <!--
 **BryanMelvison/BryanMelvison** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
