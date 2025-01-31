@@ -1,5 +1,5 @@
 ### Hi there 👋
-I'm Currently a Penultimate Student Studying Computer Science at the University of Hong Kong! Follow along my journey in learning new technology trends!
+I'm Currently a Final Year Student Studying Computer Science at the University of Hong Kong! Follow along my journey in learning new technology trends! Interested in the Generative field of AI, and Cloud Infrastrucure! I am a AWS Certified Cloud Practitioner, I am currently studying for AWS Solutions Architect Associate Certification!
 
 <!--
 **BryanMelvison/BryanMelvison** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
