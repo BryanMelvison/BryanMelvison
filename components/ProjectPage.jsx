@@ -14,7 +14,7 @@ const Projects = [
     {
         name: 'Open Domain Question Answering System for RAG',
         tech_stacks: 'Pytorch, Huggingface, MongoDB',
-        bullet_points: 'Implemented a full Retrieval-Augmented Generation (RAG) pipeline for open-domain question answering, according to the Dense Passage Retrieval (DPR) paper, leveraging SOTA lightweight BERT models (ELECTRA, DistilBERT) for encoding passages.Fine-tuned model to achieve high performance metrics, with a recall of 0,95 and Mean Reciprocal Rank of 0,81.Managed data operations with MongoDB, ensuring robust data handling and quick retrieval for real-time question answering.',
+        bullet_points: 'Implemented a Retrieval-Augmented Generation (RAG) pipeline for open-domain question answering, according to the Dense Passage Retrieval (DPR) paper, leveraging SOTA lightweight BERT models (ELECTRA, DistilBERT) for encoding passages.Fine-tuned model to achieve high performance metrics, with a recall of 0,95 and Mean Reciprocal Rank of 0,81.Managed data operations with MongoDB, ensuring robust data handling and quick retrieval for real-time question answering.',
         github_link: 'https://github.com/BryanMelvison/OQDA-RAG',
     },
     {

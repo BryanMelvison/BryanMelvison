@@ -19,7 +19,7 @@ const Hero = () => {
                     <div className= "flex justify-between gap-x-8"> 
                         {/* Text */}
                         <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left" >
-                            <div className= "text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Third Year Computer Science Student</div>
+                            <div className= "text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Final Year Computer Science Student @ HKU</div>
                             <h1 className="h1 mb-4">Hello! My name is   
                                 <span className="inline-block relative">
                                     Bryan Melvison
@@ -30,11 +30,6 @@ const Hero = () => {
 
                             {/* Buttons */}
                             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-                                {/* <Link href="/contact">
-                                    <Button className="gap-x-2">
-                                        Contact me<Send size = {18}/>
-                                    </Button>
-                                </Link> */}
                                 <a href="/cv/resume.pdf" download="resume.pdf">
                                     <Button className="gap-x-2">
                                         Download CV<Download size = {18}/>
@@ -48,14 +43,14 @@ const Hero = () => {
                         <div className="hidden xl:flex relative">
                             {/* Badges */}
                             {/* Badge 1 */}
-                            <Badge containerStyles="absolute top-[24%] -left-[5rem]" icon={<RiBriefcase4Fill />} endCountNum={2} badgeText='Past Internship Experiences'/>
+                            <Badge containerStyles="absolute top-[10%] -left-[3rem]" icon={<RiBriefcase4Fill />} endCountNum={4} badgeText='Past Internship Experiences'/>
                             
                             {/* Badge 2 */}
-                            <Badge containerStyles="absolute top-[80%] -left-[1rem]" icon={<RiSchoolFill />} endCountNum={3} endCountText=".44" badgeText='CGPA'/>
+                            <Badge containerStyles="absolute top-[70%] -left-[3rem]" icon={<RiSchoolFill />} endCountNum={3} endCountText=".35" badgeText='CGPA'/>
     
                             {/* Badge 3 */}
-                            <Badge containerStyles="absolute top-[55%] -right-8" icon={<RiTaskFill />} endCountNum={7} endCountText="+" badgeText='Projects Completed'/>
-    
+                            <Badge containerStyles="absolute top-[40%] -left-[3rem]" icon={<RiTaskFill />} endCountNum={7} endCountText="+" badgeText='Projects Completed'/>
+
                             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2">
                             </div>
                             <DevImg containerStyles='bg-hero_shape w-[462px] h-[462px] bg-no-repeat relative bg-bottom rounded-full' imgSrc="/hero/developer.png" />

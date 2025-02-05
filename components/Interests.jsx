@@ -10,8 +10,8 @@ const interestsData = [
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8} />,
-        title: 'Generative AI',
-        description: 'I love the changes that GPT models have brought about to innovations. Currently doing research on the topic to gain a much better understanding of the topic.'
+        title: 'Cloud Infrastructure',
+        description: 'I am very interested in Cloud Computing and the concept of designing a scalable, secure and resilient system! Currently deepening my understanding through AWS resources.'    
     },
     {
         icon: <BellElectric size={72} strokeWidth={0.8} />,

@@ -17,7 +17,7 @@ const icons = [
         name: <RiGithubFill />,
     },
     {
-        path: 'tel:+85251367171',
+        path: 'tel:+85254685482',
         name: <RiPhoneFill />,
     },
     {
